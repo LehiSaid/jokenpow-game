@@ -38,3 +38,32 @@ const playTheGame = (human, machine) => {
     }
 }
 
+const animeBackgrounds = [
+    "img/anime.jpg",
+    "img/cavaleiros1.jpg",
+    "img/cavaleiros2.jpg",
+    "img/naruto1.jpg",
+    "img/naruto2.jpg",
+    "img/naruto3.jpg",
+    "img/dbz1.jpg",
+    "img/dbz2.jpg",
+    "img/dbz3.jpg",
+];
+
+
+let currentBg = 0;
+
+function changeBackground() {
+    document.body.style.backgroundImage =
+        `url('${animeBackgrounds[currentBg]}')`;
+
+    currentBg = (currentBg + 1) % animeBackgrounds.length;
+}
+
+// fundo inicial
+changeBackground();
+
+// troca a cada 8 segundos
+setInterval(changeBackground, 3000);
+
+
