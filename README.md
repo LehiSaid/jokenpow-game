@@ -1,49 +1,52 @@
-echo "# JokenPow Game
+# 🎮 JokenPow Game
 
-JokenPow (Rock, Paper, Scissors) game built with HTML, CSS, and JavaScript for the browser.  
-Play against the machine (Alexa) with a live score system.
-
-## Demo
-
-You can play the game by opening the \`index.html\` file in your browser.
-
-## Features
-
-- Simple and intuitive interface with three buttons for Rock, Paper, and Scissors.  
-
-- Randomized machine choice each round.  
-
-- Live score tracking for both player and machine.  
-
-- Responsive design with nice background image and button effects.
-
-## How to Use
-
-1. Clone this repository:
-
-   \`\`\`bash
-   git clone https://github.com/SEU-USUARIO/jokenpow-game.git
-   \`\`\`
-
-2. Open the project folder and open \`index.html\` in your favorite browser.
-
-3. Click on one of the buttons (✊, 🖐️, ✌️) to play your move.  
-
-4. See the result and score update instantly.
-
-## Technologies Used
-
-- HTML  
-
-- CSS  
-
-- JavaScript
-
-## License
-
-This project is open source and available under the MIT License.
+JokenPow is a Rock, Paper, Scissors game built with **HTML, CSS, and JavaScript** for the browser.
+Play against the machine (Alexa) with a live score system and a **best-of-three match logic**.
 
 ---
 
-Feel free to contribute or open issues if you want to suggest improvements!
-" > README.md
+## 🚀 Demo
+You can play the game by opening the `index.html` file in your browser.
+
+---
+
+## ✨ Features
+- Best-of-three match system
+- Sound effects for win, lose, and draw
+- Final message when the match ends
+- Randomized machine choice each round
+- Live score tracking for player and machine
+- Animated anime-style background
+- Responsive design for desktop and mobile
+
+---
+
+## 🕹️ How to Use
+
+Clone this repository:
+
+```bash
+git clone https://github.com/SEU-USUARIO/jokenpow-game.git
+Open the project folder and open index.html in your favorite browser.
+
+Click on one of the buttons:
+
+✊ Rock
+
+🖐️ Paper
+
+✌️ Scissors
+
+See the result and score update instantly.
+
+🛠️ Technologies Used
+HTML
+
+CSS
+
+JavaScript
+
+📄 License
+This project is open source and available under the MIT License.
+
+Feel free to contribute or open issues to suggest improvements!
