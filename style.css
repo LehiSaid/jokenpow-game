@@ -5,16 +5,40 @@
 }
 
 body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+
+/* Fundo desfocado que preenche a tela */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(14px);
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+/* Imagem principal inteira (sem corte) */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--bg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
 
 
 .container {
@@ -47,6 +71,11 @@ button:hover {
     opacity: 0.7;
 }
 
+button:active {
+    transform: scale(0.95);
+}
+
+
 #rock {
     background-color: #a200ff;
 }
@@ -61,7 +90,7 @@ button:hover {
 
 p {
     font-weight:bold;
-    font-size: 35px;
+    font-size: 45px;
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
@@ -72,5 +101,69 @@ p {
 }
 
 .machine-score span {
-    color: rgb(202, 66, 13);
+    color: rgb(104, 33, 5);
+}
+
+.final-message {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.final-message.show {
+    opacity: 1;
+}
+
+.final-message.win {
+    color: rgb(5, 31, 5);
+}
+
+.final-message.lose {
+    color: red;
+}
+
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 25px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    button {
+        padding: 14px;
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 18px;
+    }
 }
